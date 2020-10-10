@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+    winner: '',
     students: {
         '0': {
             name: 'tmp',
@@ -19,14 +20,18 @@ const INITIAL_STATE = {
 export default function (state = INITIAL_STATE, action) {
    switch(action.type){
        case 'REGISTER_STUDENT':
-            let new_state = {...state};
-            new_state.students[action.index] = {
-                name: action.name,
-                hp: action.hp,
-                dps: action.dps,
-                img_src: action.img_src
-            };
-            return new_state;
+            return {
+                ...state,
+                students: {
+                    ...state.students,
+                    [action.index]: {
+                        name: action.name,
+                        hp: action.hp,
+                        dps: action.dps,
+                        img_src: action.img_src
+                    }
+                }
+            }
         case 'UPDATE':
             /**
              * Updates a Single field for a student
@@ -43,6 +48,11 @@ export default function (state = INITIAL_STATE, action) {
                         [action.field]: action.value
                     }
                 }
+            }
+        case 'SET_WINNER':
+            return {
+                ...state,
+                winner: action.index
             }
        default:
            return state

@@ -19,7 +19,7 @@ class Student extends React.Component {
 
         this.props.dispatch({
             type: 'REGISTER_STUDENT',
-            id: this.props.id,
+            index: this.props.id,
             name: 'temp',
             hp: hp,
             dps: dps,

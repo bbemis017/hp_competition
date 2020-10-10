@@ -5,6 +5,7 @@ import {
 } from 'react-bootstrap';
 
 import Student from './components/student';
+import Compete from './components/compete';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Student id={0} />
         </div>
         <div className="col-md-4">
-          <h1>Compete</h1>
+          <Compete/>
         </div>
         <div className="col-md-4">
           <Student id={1} />
