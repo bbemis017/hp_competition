@@ -4,18 +4,20 @@ import {
   Row
 } from 'react-bootstrap';
 
+import Student from './components/student';
+
 function App() {
   return (
     <Container>
       <Row>
         <div className="col-md-4">
-          <h1>Student 1</h1>
+          <Student id={0} />
         </div>
         <div className="col-md-4">
           <h1>Compete</h1>
         </div>
         <div className="col-md-4">
-          <h2>Student 2</h2>
+          <Student id={1} />
         </div>
       </Row>
     </Container>
