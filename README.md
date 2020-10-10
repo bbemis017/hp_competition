@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Statement
 
-## Available Scripts
+Expand on the original exercise for the laughter competition (https://repl.it/@MatiasForbord/CodeCombat-challenge) by displaying it as a simple website. It should display one student on the left, one student on the right, and a "compete" button in the middle.
 
-In the project directory, you can run:
+1. Using Vue (or another front end framework if you prefer), make a small website with some styling of your choice.
+2. Show 1 student on the left, and 1 student on the right. Display their name, HP and DPS as input elements.
+3. In the middle, display a "Compete" button to run the competition.
+4. In the middle, display the winner of the competition after pressing the "Compete" button.
+5. When the page loads, fetch the data from /users on https://jsonplaceholder.typicode.com
+6. Use a random name from the API for each student
+7. Use random HP and DPS for each student
 
-### `yarn start`
+Bonus points:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Add some fun visuals to celebrate the winner
+* Store the names from the API locally
+* Add a "Randomize" button under each student. Clicking it replaces name, HP and DPS with random values
+* Add a random picture for each student, for example from https://thecatapi.com
+* Use git to track your progress with regular commits
+* Host the site, for example on https://www.netlify.com
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Please send the code here via email.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Best of luck, and have fun! :)

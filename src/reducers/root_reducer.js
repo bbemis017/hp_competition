@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
 import students from './students';
+import users from './users';
 
 const rootReducer = combineReducers({
-    students
+    students,
+    users
 });
 
 export default rootReducer;

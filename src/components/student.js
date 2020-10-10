@@ -15,12 +15,13 @@ class Student extends React.Component {
     generate_stats() {
         let hp = Math.round(Math.random() * 299) + 1; // Random number between 1 and 300
         hp *= -1; // make hp negative
+
         let dps = Math.round(Math.random() * 49) + 1; // Random number between 1 and 49
 
         this.props.dispatch({
             type: 'REGISTER_STUDENT',
             index: this.props.id,
-            name: 'temp',
+            name: '',
             hp: hp,
             dps: dps,
             img_src: 'temp'
