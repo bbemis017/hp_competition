@@ -25,13 +25,16 @@ class Student extends React.Component {
             name = this.props.potential_names[rand_user_index].name;
         }
 
+        let rand_num = Math.round(Math.random() * 1000);
+        let img_url = `https://robohash.org/${rand_num}.png?set=set4&size=150x150`;
+
         this.props.dispatch({
             type: 'REGISTER_STUDENT',
             index: this.props.id,
             name: name,
             hp: hp,
             dps: dps,
-            img_src: 'temp'
+            img_src: img_url
         });
 
         this.props.dispatch({
@@ -54,11 +57,7 @@ class Student extends React.Component {
             <div className="student text-center">
                 <Card>
                     <div className="student-img mx-auto">
-                        { this.props.id === 0 ? (
-                            <img alt="student" src={require('../assets/cat0.png')}/>
-                        ): (
-                            <img alt="stuent" src={require('../assets/cat1.png')}/>
-                        ) }
+                        <img alt="Robo Hash Image" src={this.props.img_src}/>
                     </div>
                     <Card.Title>{this.props.name}</Card.Title>
 

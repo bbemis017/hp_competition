@@ -55,11 +55,7 @@ class Compete extends React.Component {
                         <h1>Winner!</h1>
                         <Card>
                             <div className="student-img mx-auto">
-                                { this.props.winner_index === 0 ? (
-                                    <img alt="student" src={require('../assets/cat0.png')}/>
-                                ): (
-                                    <img alt="stuent" src={require('../assets/cat1.png')}/>
-                                ) }
+                                <img alt="Robo Hash" src={this.props.students[this.props.winner_index].img_src} />
                             </div>
                             <Card.Title>{this.props.students[this.props.winner_index].name}</Card.Title>
                         </Card>
