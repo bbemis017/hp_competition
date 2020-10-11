@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  Button,
-  Card
+  Button
 } from 'react-bootstrap';
 
-import "animate.css";
+import Results from './results';
 
 class Compete extends React.Component {
 
@@ -51,15 +50,7 @@ class Compete extends React.Component {
             <div className="compete text-center">
 
                 {this.props.winner_index !== ''? (
-                    <div className="winner animate__animated animate__zoomInDown">
-                        <h1>Winner!</h1>
-                        <Card>
-                            <div className="student-img mx-auto">
-                                <img alt="Robo Hash" src={this.props.students[this.props.winner_index].img_src} />
-                            </div>
-                            <Card.Title>{this.props.students[this.props.winner_index].name}</Card.Title>
-                        </Card>
-                    </div>
+                    <Results />
                 ): (
                     <div>
                         <img

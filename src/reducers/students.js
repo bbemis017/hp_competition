@@ -50,6 +50,10 @@ export default function (state = INITIAL_STATE, action) {
                 }
             }
         case 'SET_WINNER':
+            /**
+             * Sets the winner of the competition, can also be used to reset the winner
+             * @param Winner's index
+             */
             return {
                 ...state,
                 winner: action.index
