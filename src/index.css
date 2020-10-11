@@ -12,10 +12,18 @@ code {
     monospace;
 }
 
+.app {
+  margin-top: 10px;
+}
+
 .student .card {
   padding: 5px;
 }
 
 .student-img {
   max-width: 100px;
+}
+
+.compete {
+  margin: 15px 0;
 }

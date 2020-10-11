@@ -3,28 +3,40 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   Card,
-  FormControl
+  FormControl,
+  Button
 } from 'react-bootstrap';
 
 class Student extends React.Component {
 
     componentDidMount() {
-        this.generate_stats();
+        this.randomize();
     }
 
-    generate_stats() {
+    randomize() {
         let hp = Math.round(Math.random() * 299) + 1; // Random number between 1 and 300
         hp *= -1; // make hp negative
 
         let dps = Math.round(Math.random() * 49) + 1; // Random number between 1 and 49
 
+        let name = '';
+        if(this.props.potential_names.length > 0){
+            let rand_user_index = Math.round(Math.random() * (this.props.potential_names.length - 1));
+            name = this.props.potential_names[rand_user_index].name;
+        }
+
         this.props.dispatch({
             type: 'REGISTER_STUDENT',
             index: this.props.id,
-            name: '',
+            name: name,
             hp: hp,
             dps: dps,
             img_src: 'temp'
+        });
+
+        this.props.dispatch({
+            type: 'SET_WINNER',
+            index: ''
         });
     }
 
@@ -60,6 +72,11 @@ class Student extends React.Component {
                     <FormControl
                         value={this.props.dps}
                         onChange={(e)=>{this.update_stat('dps', e)}}/>
+
+                    <Button
+                        variant="primary"
+                        onClick={()=> {this.randomize()}}
+                    >Randomize</Button>
                 </Card>
             </div>
         )
@@ -76,7 +93,8 @@ function mapStateToProps(state, ownProps) {
         name: student.name,
         hp: student.hp,
         dps: student.dps,
-        img_src: student.img_src
+        img_src: student.img_src,
+        potential_names: state.users.users
     };
 }
 

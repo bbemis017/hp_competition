@@ -5,6 +5,8 @@ import {
   Card
 } from 'react-bootstrap';
 
+import "animate.css";
+
 class Compete extends React.Component {
 
     handle_compete() {
@@ -46,10 +48,10 @@ class Compete extends React.Component {
 
     render() {
         return (
-            <div className="compete">
+            <div className="compete text-center">
 
                 {this.props.winner_index !== ''? (
-                    <div className="winner">
+                    <div className="winner animate__animated animate__zoomInDown">
                         <h1>Winner!</h1>
                         <Card>
                             <div className="student-img mx-auto">
@@ -62,7 +64,15 @@ class Compete extends React.Component {
                             <Card.Title>{this.props.students[this.props.winner_index].name}</Card.Title>
                         </Card>
                     </div>
-                ): ('')}
+                ): (
+                    <div>
+                        <img
+                            alt="vs"
+                            src={require('../assets/vs.png')}
+                            width="100px"
+                        />
+                    </div>
+                )}
                 <Button
                     onClick={()=>{this.handle_compete();}}
                 >
